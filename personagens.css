@@ -1,0 +1,89 @@
+.frase {
+  position: center;
+  color: aquamarine;
+  border-radius: 10px;
+  width: 350px;
+  border: 4px solid purple;
+  font-family: "Roboto Mono", monospace;
+  font-style: normal;
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+    0% {
+      box-shadow: 0 0 10px 0px purple;
+    }
+    50% {
+      box-shadow: 0 0 20px 5px purple; /
+    }
+    100% {
+      box-shadow: 0 0 10px 0px purple;
+    }
+  }
+.card-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.card {
+  background-color: rgb(187, 170, 15);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 20px;
+  margin: 10px;
+  width: 300px;
+}
+
+.sidebar {
+  display: grid;
+  grid-template-columns: 200px 200px 250px 200px 200px;
+  grid-template-rows: 15px;
+  background-color: transparent;
+  justify-items: end;
+}
+
+.sidebar a {
+  padding: 15px;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: gold;
+}
+
+.descrição,
+.descrição2,
+.descrição3,
+.descrição4 {
+  position: relative;
+  margin-left: 0;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    width: 100%;
+  }
+
+  .sidebar {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+
+  .descrição,
+  .descrição2,
+  .descrição3,
+  .descrição4 {
+    position: relative;
+    top: 0;
+    margin-left: 0;
+  }
+
+  p {
+    margin-left: 0;
+  }
+}

@@ -1,0 +1,53 @@
+.form {
+  margin-left: 300px;
+  margin-top: -300px;
+}
+
+.sidebar {
+  display: grid;
+  grid-template-columns: 200px 200px 250px 200px 200px;
+  grid-template-rows: 15px 15px 15px 15px 15px;
+  background-color: transparent;
+  justify-items: end;
+}
+
+.sidebar a {
+  padding: 15px;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: gold;
+}
+
+.mapa {
+  margin-top: 100px;
+}
+
+.artigo {
+  font-size: 30px;
+  color: aquamarine;
+  line-break: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .form {
+    margin-top: 50px;
+    margin-left: -100px;
+  }
+
+  .sidebar {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+
+  .mapa {
+    margin-top: 100px;
+  }
+
+  .artigo {
+    font-size: 24px;
+  }
+}
